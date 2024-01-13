@@ -30,8 +30,8 @@
 
 
         const data = new Date();
-        day.innerHTML = (data.getDate()>10?"0":"") + days[data.getDay()];
-        date.innerHTML = data.getDate();
+        day.innerHTML =  days[data.getDay()];
+        date.innerHTML = (data.getDate()<10?"0":"") + data.getDate();
         month.innerHTML = months[data.getMonth()];
         year.innerHTML = data.getFullYear();
 
