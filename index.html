@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mini Calender using html css js</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="left">
+                <p id="date">13</p>
+                <p id="day">tuesday</p>
+            </div>
+            <div class="right">
+                <p id="month">june</p>
+                <p id="year">2023</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const day = document.getElementById("day");
+        const date = document.getElementById("date");
+        const month = document.getElementById("month");
+        const year = document.getElementById("year");
+        
+        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        const days = ['Sunday', 'Monday', 'Tuesday','Wednesday','Thursday', 'Friday', 'Saturday'];
+
+
+        const data = new Date();
+        day.innerHTML = (data.getDate()>10?"0":"") + days[data.getDay()];
+        date.innerHTML = data.getDate();
+        month.innerHTML = months[data.getMonth()];
+        year.innerHTML = data.getFullYear();
+
+    </script>
+</body>
+</html>
